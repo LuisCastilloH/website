@@ -7,3 +7,6 @@ __pycache__
 # ignore a file type
 *.pyc
 *.db
+*.log
+*.swp
+*.swo
