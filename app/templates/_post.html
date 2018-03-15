@@ -1,4 +1,8 @@
 <ul>
     <li><img scr="{{ post.author.avatar(36) }}"</li>
-    <li>{{ post.author.username }} says:<br>{{ post.body }}</li>
+    <li><a href="{{ url_for('user', username=post.author.username) }}">
+        {{ post.author.username }} 
+        </a>
+        says:<br>{{ post.body }}
+    </li>
 </ul>
