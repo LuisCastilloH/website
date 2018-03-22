@@ -3,6 +3,7 @@ __pycache__
 
 #ignore an entire directory
 /__pycache__/
+/logs/
 
 # ignore a file type
 *.pyc
