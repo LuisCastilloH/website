@@ -14,47 +14,50 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-airline/vim-airline'
 " --------------------------------
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-"Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-set noundofile
 
-" autocmd vimenter * NERDTree
+let g:airline#extensions#tabline#enabled = 1
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>
+
+set hidden
+set nowrap
 set tabstop=4
+set backspace=indent,eol,start
+set autoindent
+set copyindent
+set number
 set shiftwidth=4
+set shiftround
+set showmatch
+set ignorecase
+set smartcase
+set smarttab
+set hlsearch
+nnoremap <CR> :noh<CR><CR>
+set incsearch
+set history=1000
+set title
+set visualbell
+set noerrorbells
+set nobackup
+set noswapfile
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+set scrolloff=4
+
+set noundofile
 set expandtab
 syntax on
 set guifont=Consolas:h12:cANSI:qDRAFT
-set number
 set ruler
 set lines=40 
 set columns=85
