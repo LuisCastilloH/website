@@ -3,9 +3,11 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize (For Unix and Windows)
 if has("win16") || has("win32")
+    set guifont=Consolas:h12:cANSI:qDRAFT
     set rtp+=$USERPROFILE/Vim/vimfiles/bundle/Vundle.vim
     call vundle#begin('$USERPROFILE\Vim\vimfiles\bundle\')
 else
+    set guifont=Consolas\ 11
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin()
 endif
@@ -99,7 +101,6 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 set scrolloff=4
 
 set noundofile
-set guifont=Consolas:h12:cANSI:qDRAFT
 set ruler
 set lines=40 
 set columns=85
